@@ -32,7 +32,7 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
   (pantalla de inicio del celular) y la vista previa de WhatsApp / LinkedIn `vista-previa.jpg` (1200 × 630, molde en
   `scripts/vista_previa.html`). Las dos imágenes se rearman con `python scripts/armar_imagenes.py` (Chrome headless +
   System.Drawing de Windows para el JPG, sin librerías). Las etiquetas Open Graph necesitan la URL pública completa
-  (`python scripts/poner_url.py`). Se publica en https://cataniamarcia32-sys.github.io/cv-marcia/ (cuenta de Marcia).
+  (`python scripts/poner_url.py`). Prueba en https://juanbbuira-design.github.io/cv-marcia/ (cuenta de Juan); después va a la de Marcia (cataniamarcia32-sys).
 - `borrador/`: el HTML original y la foto original, como referencia. No se publican.
 - `herramientas/`: `tailwindcss.exe` (no va a git, se copia de Apuestas).
 
