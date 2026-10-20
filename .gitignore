@@ -1,0 +1,11 @@
+# Ejecutables de herramientas (tailwindcss.exe pesa 40 MB)
+herramientas/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / sistema
+.vscode/
+Thumbs.db
+desktop.ini
