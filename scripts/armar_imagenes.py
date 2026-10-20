@@ -46,12 +46,13 @@ def main():
     if not os.path.exists(CHROME):
         sys.exit(f"No encuentro Chrome en {CHROME}")
     with tempfile.TemporaryDirectory() as temporal:
-        # Vista previa para compartir
-        png = os.path.join(temporal, "vista-previa.png")
-        captura(os.path.join(CARPETA_BASE, "scripts", "vista_previa.html"), 1200, 630, png)
-        destino = os.path.join(IMG, "vista-previa.jpg")
-        png_a_jpg(png, destino)
-        print(f"OK: sitio/img/vista-previa.jpg ({os.path.getsize(destino) / 1024:.0f} KB)")
+        # Vista previa para compartir, una por idioma
+        for molde, nombre in (("vista_previa.html", "vista-previa.jpg"), ("vista_previa_en.html", "vista-previa-en.jpg")):
+            png = os.path.join(temporal, nombre + ".png")
+            captura(os.path.join(CARPETA_BASE, "scripts", molde), 1200, 630, png)
+            destino = os.path.join(IMG, nombre)
+            png_a_jpg(png, destino)
+            print(f"OK: sitio/img/{nombre} ({os.path.getsize(destino) / 1024:.0f} KB)")
 
         # Ícono 180 × 180: el SVG dibujado a pantalla completa
         envoltorio = os.path.join(temporal, "icono.html")

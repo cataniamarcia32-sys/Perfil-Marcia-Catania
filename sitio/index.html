@@ -11,19 +11,23 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icono-180.png">
 
+    <!-- Las dos versiones se avisan entre sí (Google muestra la del idioma de cada uno) -->
+    <link rel="alternate" hreflang="es" href="./">
+    <link rel="alternate" hreflang="en" href="en/">
+
     <!-- Vista previa al pegar el link en WhatsApp / LinkedIn (Open Graph). La imagen sale de scripts/armar_imagenes.py.
          WhatsApp y LinkedIn necesitan la dirección completa: si cambia, correr scripts/poner_url.py. -->
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://juanbbuira-design.github.io/cv-marcia/">
+    <meta property="og:url" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/">
     <meta property="og:locale" content="es_AR">
     <meta property="og:title" content="Marcia Catania · Supply Chain & International Trade Leader">
     <meta property="og:description" content="Operaciones, comercio exterior y logística crítica Pharma. +14 años en multinacionales, 24 personas a cargo.">
-    <meta property="og:image" content="https://juanbbuira-design.github.io/cv-marcia/img/vista-previa.jpg">
+    <meta property="og:image" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/img/vista-previa.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Marcia Catania · Supply Chain & International Trade Leader">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://juanbbuira-design.github.io/cv-marcia/img/vista-previa.jpg">
+    <meta name="twitter:image" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/img/vista-previa.jpg">
 
     <link rel="stylesheet" href="fuentes/fuentes.css">
     <link rel="stylesheet" href="css/app.css">
@@ -42,6 +46,11 @@
                 <li><a href="#formacion" class="enlace-menu">Formación</a></li>
             </ul>
             <div class="flex items-center gap-4">
+                <!-- Selector de idioma: lleva a la otra versión (sitio/en/), en la misma sección -->
+                <div class="idiomas" aria-label="Idioma">
+                    <span aria-current="true">ES</span>
+                    <a href="en/" class="cambiar-idioma" lang="en" hreflang="en">EN</a>
+                </div>
                 <a href="#contacto" class="hidden sm:inline text-[13px] text-tinta border-b border-tinta pb-0.5">Contactar</a>
                 <button id="boton-menu" class="md:hidden text-tinta text-2xl p-1" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-celular">
                     <i data-lucide="menu"></i>
@@ -443,6 +452,11 @@
         menuCelular.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
             menuCelular.classList.add("hidden");
             botonMenu.setAttribute("aria-expanded", false);
+        }));
+
+        // Al cambiar de idioma se queda en la misma sección (las dos versiones usan los mismos id)
+        document.querySelectorAll(".cambiar-idioma").forEach(a => a.addEventListener("click", () => {
+            a.href = a.getAttribute("href").split("#")[0] + location.hash;
         }));
     </script>
 </body>

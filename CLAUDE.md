@@ -32,7 +32,12 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
   (pantalla de inicio del celular) y la vista previa de WhatsApp / LinkedIn `vista-previa.jpg` (1200 × 630, molde en
   `scripts/vista_previa.html`). Las dos imágenes se rearman con `python scripts/armar_imagenes.py` (Chrome headless +
   System.Drawing de Windows para el JPG, sin librerías). Las etiquetas Open Graph necesitan la URL pública completa
-  (`python scripts/poner_url.py`). Prueba en https://juanbbuira-design.github.io/cv-marcia/ (cuenta de Juan); después va a la de Marcia (cataniamarcia32-sys).
+  (`python scripts/poner_url.py`). Se publica en la cuenta de Marcia: https://cataniamarcia32-sys.github.io/perfil-marcia-catania/
+  (repositorio `perfil-marcia-catania`; GitHub no admite espacios en el nombre).
+- Versión en inglés (20/10): `sitio/en/index.html`, misma estructura y mismos `id` de sección. Selector ES | EN
+  (`.idiomas` en `entrada.css`) que mantiene la sección al cambiar. Vista previa propia `vista-previa-en.jpg` (molde
+  `scripts/vista_previa_en.html`). **Si se cambia un dato, cambiarlo en las dos páginas.** Traducción hecha por Claude:
+  conviene que Marcia la revise.
 - `borrador/`: el HTML original y la foto original, como referencia. No se publican.
 - `herramientas/`: `tailwindcss.exe` (no va a git, se copia de Apuestas).
 
@@ -40,10 +45,11 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
 - Si tocás clases de Tailwind en el HTML, recompilá el CSS: `python scripts/compilar_css.py`
 - Para verla: abrir `sitio/index.html` con doble clic (necesita las carpetas de al lado; copiar solo el HTML no sirve).
 - Para mandarla en un solo archivo (WhatsApp / mail): `python scripts/armar_un_archivo.py` →
-  `para_enviar/CV Marcia Catania.html` (~1,4 MB, todo adentro). Correrlo de nuevo después de cada cambio.
+  `para_enviar/CV Marcia Catania.html` y `CV Marcia Catania (English).html` (~1,4 MB cada uno, todo adentro; el
+  selector ES | EN lleva a la otra versión publicada). Correrlo de nuevo después de cada cambio.
 - Publicación: GitHub Pages con `.github/workflows/publicar.yml`, que publica `sitio/` en cada push a `main`
   (en GitHub: Settings → Pages → Source: "GitHub Actions"). Con la dirección pública:
-  `python scripts/poner_url.py https://cataniamarcia32-sys.github.io/cv-marcia/` (completa og:url y la imagen de la vista previa).
+  `python scripts/poner_url.py https://cataniamarcia32-sys.github.io/perfil-marcia-catania/` (completa og:url y la imagen de la vista previa).
 
 ## Cómo quiero que trabajes conmigo
 - Trabajá en pasos chicos. Después de cada cambio, explicame en una o dos líneas qué hiciste.

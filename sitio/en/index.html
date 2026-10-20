@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Versión en inglés de sitio/index.html (20/10). Si se cambia un dato, cambiarlo en las dos. -->
+    <title>Marcia Catania · Supply Chain & International Trade Leader</title>
+    <meta name="description" content="International Trade graduate with a postgraduate degree in Project Management and 14+ years in multinational companies. Critical pharma logistics, cold chain, crisis management and team leadership.">
+    <meta name="theme-color" content="#13363f">
+
+    <!-- Ícono de la pestaña y de la pantalla de inicio del celular -->
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/icono-180.png">
+
+    <!-- Las dos versiones se avisan entre sí (Google muestra la del idioma de cada uno) -->
+    <link rel="alternate" hreflang="es" href="../">
+    <link rel="alternate" hreflang="en" href="./">
+
+    <!-- Vista previa al pegar el link en WhatsApp / LinkedIn (Open Graph). La imagen sale de scripts/armar_imagenes.py.
+         WhatsApp y LinkedIn necesitan la dirección completa: si cambia, correr scripts/poner_url.py. -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/en/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Marcia Catania · Supply Chain & International Trade Leader">
+    <meta property="og:description" content="Operations, international trade and critical pharma logistics. 14+ years in multinational companies, leading a team of 24.">
+    <meta property="og:image" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/img/vista-previa-en.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Marcia Catania · Supply Chain & International Trade Leader">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://cataniamarcia32-sys.github.io/perfil-marcia-catania/img/vista-previa-en.jpg">
+
+    <link rel="stylesheet" href="../fuentes/fuentes.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+
+    <!-- MENÚ FIJO -->
+    <header class="sticky top-0 z-50 bg-fondo/90 backdrop-blur-md border-b border-linea">
+        <nav class="envoltura flex items-center justify-between h-16">
+            <a href="#inicio" class="font-serif text-xl text-tinta">Marcia Catania</a>
+            <ul class="hidden md:flex items-center gap-7 text-[13px] text-suave">
+                <li><a href="#casos" class="enlace-menu">Case studies</a></li>
+                <li><a href="#liderazgo" class="enlace-menu">Leadership</a></li>
+                <li><a href="#competencias" class="enlace-menu">Skills</a></li>
+                <li><a href="#trayectoria" class="enlace-menu">Experience</a></li>
+                <li><a href="#formacion" class="enlace-menu">Education</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <!-- Selector de idioma: lleva a la otra versión, en la misma sección -->
+                <div class="idiomas" aria-label="Language">
+                    <a href="../" class="cambiar-idioma" lang="es" hreflang="es">ES</a>
+                    <span aria-current="true">EN</span>
+                </div>
+                <a href="#contacto" class="hidden sm:inline text-[13px] text-tinta border-b border-tinta pb-0.5">Contact</a>
+                <button id="boton-menu" class="md:hidden text-tinta text-2xl p-1" aria-label="Open menu" aria-expanded="false" aria-controls="menu-celular">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú desplegable del celular -->
+        <ul id="menu-celular" class="hidden md:hidden envoltura pb-4 text-sm text-tinta divide-y divide-linea">
+            <li><a href="#casos" class="block py-3">Case studies</a></li>
+            <li><a href="#liderazgo" class="block py-3">Leadership</a></li>
+            <li><a href="#competencias" class="block py-3">Skills</a></li>
+            <li><a href="#trayectoria" class="block py-3">Experience</a></li>
+            <li><a href="#formacion" class="block py-3">Education</a></li>
+            <li><a href="#contacto" class="block py-3 font-semibold">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- ENCABEZADO -->
+        <section id="inicio" class="envoltura grid lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-16 items-center pt-12 pb-14 lg:pt-16">
+            <div>
+                <span class="inline-flex items-center gap-2 mb-5 px-3 py-1.5 rounded-full bg-papel border border-linea text-[13px] font-medium text-tinta">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/15"></span> Open to new opportunities
+                </span>
+                <span class="volanta">Supply Chain & International Trade Leader</span>
+                <h1 class="font-serif font-normal text-[2.5rem] sm:text-5xl lg:text-[3.6rem] leading-[1.05] tracking-tight text-tinta mt-4 mb-6">
+                    Complex supply chains, solved with <em class="text-acento">quality and leadership</em>.
+                </h1>
+                <p class="text-[17px] leading-relaxed max-w-xl">
+                    International Trade graduate with a postgraduate degree in Project Management and <strong class="text-tinta font-semibold">14+ years</strong> in multinational companies.
+                    Specialized in highly complex critical logistics (pharma, cold chain, dangerous goods), crisis resolution,
+                    leadership of high-performance teams, and process and cost optimization.
+                </p>
+                <div class="flex flex-wrap gap-x-6 gap-y-2 mt-7 text-[13px] text-suave">
+                    <span class="inline-flex items-center gap-1.5"><i data-lucide="map-pin"></i> Buenos Aires, Argentina</span>
+                    <span class="inline-flex items-center gap-1.5"><i data-lucide="globe"></i> English C1 · Portuguese</span>
+                    <span class="inline-flex items-center gap-1.5"><i data-lucide="shield-check"></i> GxP · ISO 9001 · ANMAT · AEO</span>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <a href="mailto:cataniamarcia32@gmail.com" class="btn-primario"><i data-lucide="mail"></i> Email me</a>
+                    <a href="https://wa.me/5492304361225" target="_blank" rel="noopener" class="btn-secundario"><i data-lucide="phone"></i> WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/marciacatania" target="_blank" rel="noopener" class="btn-secundario"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+                </div>
+            </div>
+            <div class="relative order-first lg:order-none w-[240px] sm:w-full sm:max-w-sm lg:max-w-none mr-6">
+                <div class="absolute inset-0 translate-x-6 translate-y-6 bg-celeste" aria-hidden="true"></div>
+                <img src="../img/marcia.jpg" alt="Marcia Catania" width="896" height="1095" class="relative w-full aspect-[4/5] object-cover object-top">
+            </div>
+        </section>
+
+        <!-- NÚMEROS -->
+        <div class="envoltura">
+            <div class="grid sm:grid-cols-3 border-y border-linea divide-y sm:divide-y-0 sm:divide-x divide-linea">
+                <div class="py-7 sm:pr-8">
+                    <b class="block font-serif font-normal text-5xl text-tinta leading-none">24</b>
+                    <small class="block text-[13px] text-suave mt-2">direct and indirect reports across 4 areas: Exports, Imports, Warehouse and Customer Service</small>
+                </div>
+                <div class="py-7 sm:px-8">
+                    <b class="block font-serif font-normal text-5xl text-tinta leading-none">14+</b>
+                    <small class="block text-[13px] text-suave mt-2">years of experience in multinational companies</small>
+                </div>
+                <div class="py-7 sm:pl-8">
+                    <b class="block font-serif font-normal text-5xl text-tinta leading-none">100%</b>
+                    <small class="block text-[13px] text-suave mt-2">on-time delivery with zero cold-chain breaks in the COVID-19 vaccine export operation</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASOS DE ÉXITO -->
+        <section id="casos" class="envoltura pt-20 pb-8">
+            <span class="volanta">Case studies · CAR / STAR method</span>
+            <h2 class="titulo-seccion">Milestones that created value</h2>
+
+            <div class="space-y-12">
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Crisis management &amp; imports</b>2025</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">Operational recovery after the TCA system collapse (customs bonded warehouse)</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> in 2025, the migration and prolonged outage of the TCA system brought air imports in Argentina to a standstill, causing record delays and critical risks for pharmaceutical cargo.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Led the priority claims strategy and close, direct follow-up with executives and key accounts.</li>
+                            <li>Redesigned the SOPs that were bottlenecks in Imports and professionalized team management.</li>
+                        </ul>
+                        <p class="impacto">Fast cargo recovery with no critical losses, a substantial improvement in KPIs and significant savings in demurrage and storage costs.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Global critical logistics</b>2022 – 2023</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">COVID-19 vaccine export and distribution</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> design and coordinate, under maximum pressure, the air logistics and cold chain for the international shipment of COVID-19 vaccines to pharmaceutical industry standards.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Directly managed special permits with ANMAT, the Ministry of Health, Customs and airlines.</li>
+                            <li>Ensured compliance with strict temperature protocols and dangerous goods regulations (DG Handling).</li>
+                        </ul>
+                        <p class="impacto">100% on-time delivery with zero cold-chain breaks, in the middle of a global emergency.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Financial efficiency &amp; procurement</b>Ongoing</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">Operating cost and supplier network optimization</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> keep rates highly competitive and protect profit margins without compromising the demanding operational and temperature requirements of pharmaceutical logistics.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Full renegotiation of contracts and tenders with freight forwarders, airlines and carriers.</li>
+                            <li>Ongoing development and auditing of new regional and local logistics providers.</li>
+                            <li>Strict auditing of storage fees, customs charges and demurrage costs.</li>
+                        </ul>
+                        <p class="impacto">Substantial cost reduction in ongoing operations, maximizing the area's gross margin and profitability.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Quality &amp; global compliance</b>Ongoing</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">Excellence in international standards (IATA, AEO, GxP, ISO 9001)</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> raise the safety and quality standards required by international regulators and local health inspections.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Rigorous implementation of IATA regulations for the safe handling of air cargo and dangerous goods.</li>
+                            <li>Process alignment with AEO (Authorized Economic Operator), GxP (GDP/GMP) and ISO 9001 standards.</li>
+                            <li>Oversight of CAPA investigations, the risk matrix and the effectiveness of operational controls.</li>
+                        </ul>
+                        <p class="impacto">No major findings in health or customs audits, positioning the company as a benchmark for reliability.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Operations &amp; warehouse</b>2025 – 2026</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">Key account recovery, quality audit and stock clean-up</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> restore the trust of a high-volume pharmaceutical client after a failed warehouse audit caused by procedural deviations and absenteeism.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Designed and implemented an automatic replenishment system for packaging stock.</li>
+                            <li>Trained the entire team in standardized procedures (CAPAs / SOPs).</li>
+                            <li>Full warehouse clean-up: scheduled disposal of materials idle for over 5 years and firm control of absenteeism.</li>
+                        </ul>
+                        <p class="impacto">Client retained, subsequent audits passed and operating space optimized.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-10 border-t-2 border-tinta pt-6">
+                    <div class="text-[13px] text-suave"><b class="block text-acento font-semibold mb-1">Digital transformation</b>Ongoing</div>
+                    <div>
+                        <h3 class="font-serif text-2xl text-tinta mb-3">SAP ERP implementation and digital workflow automation</h3>
+                        <p class="leading-relaxed"><strong class="text-tinta font-semibold">Challenge:</strong> modernize information systems, eliminate repetitive manual processes in international trade and improve the accuracy of executive dashboards.</p>
+                        <ul class="lista mt-4 text-[15px]">
+                            <li>Key role in the transition to and implementation of SAP (procurement, inventory, orders and financial integration).</li>
+                            <li>Integration of automation and AI tools (Claude, LLMs, N8N, Make) for documentation and reporting.</li>
+                        </ul>
+                        <p class="impacto">Less administrative time, full financial traceability and real-time visibility for management.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- LIDERAZGO (franja petróleo) -->
+        <section id="liderazgo" class="bg-tinta text-white/80 mt-20 py-20">
+            <div class="envoltura">
+                <span class="volanta !text-celeste">Talent &amp; culture</span>
+                <h2 class="titulo-seccion !text-white !mb-4">Leading four areas</h2>
+                <p class="max-w-2xl leading-relaxed mb-12">
+                    Unified management of 24 people (4 direct and 20 indirect reports): building professional teams,
+                    resolving cross-department conflicts and driving continuous improvement.
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                    <div class="border-t border-white/20 pt-5">
+                        <i data-lucide="plane-takeoff" class="text-2xl text-celeste"></i>
+                        <h3 class="font-serif text-xl text-white mt-4 mb-2">Exports <span class="text-white/50 text-base">· 4 years</span></h3>
+                        <p class="text-sm leading-relaxed">Full professionalization of the area: strict SOP compliance, a drastic reduction in operational deviations, daily KPI tracking and ongoing performance reviews.</p>
+                        <p class="text-[13px] text-celeste mt-3">Low deviation rate in audits</p>
+                    </div>
+                    <div class="border-t border-white/20 pt-5">
+                        <i data-lucide="plane-landing" class="text-2xl text-celeste"></i>
+                        <h3 class="font-serif text-xl text-white mt-4 mb-2">Imports <span class="text-white/50 text-base">· 1 year</span></h3>
+                        <p class="text-sm leading-relaxed">Restructuring after the airport crisis: mentoring the area lead, resolving team conflicts and streamlining workflows with direct savings in freight and warehousing.</p>
+                        <p class="text-[13px] text-celeste mt-3">Resilient leadership in a crisis</p>
+                    </div>
+                    <div class="border-t border-white/20 pt-5">
+                        <i data-lucide="warehouse" class="text-2xl text-celeste"></i>
+                        <h3 class="font-serif text-xl text-white mt-4 mb-2">Warehouse</h3>
+                        <p class="text-sm leading-relaxed">Aligned the area with GMP/GDP standards. Reduced absenteeism by combining motivational leadership with procedural rigor. Automated stock management.</p>
+                        <p class="text-[13px] text-celeste mt-3">Process order and discipline</p>
+                    </div>
+                    <div class="border-t border-white/20 pt-5">
+                        <i data-lucide="headphones" class="text-2xl text-celeste"></i>
+                        <h3 class="font-serif text-xl text-white mt-4 mb-2">Customer Service</h3>
+                        <p class="text-sm leading-relaxed">Alignment with the Sales team. Active participation in monthly business reviews (MBRs) with pharma clients and in industry forums (AmCham Healthcare).</p>
+                        <p class="text-[13px] text-celeste mt-3">C-level relationship management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETENCIAS -->
+        <section id="competencias" class="envoltura pt-20">
+            <span class="volanta">Skills &amp; tools</span>
+            <h2 class="titulo-seccion">Technical toolkit</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+                <div>
+                    <h3 class="flex items-center gap-2 font-semibold text-tinta pb-3 mb-4 border-b border-linea"><i data-lucide="award" class="text-acento"></i> Quality &amp; GxP</h3>
+                    <dl class="space-y-3 text-sm">
+                        <div><dt class="text-xs text-suave">Quality systems</dt><dd class="font-medium text-tinta">ISO 9001, GxP (GDP/GMP)</dd></div>
+                        <div><dt class="text-xs text-suave">Deviation investigation</dt><dd class="font-medium text-tinta">RCA &amp; CAPA management</dd></div>
+                        <div><dt class="text-xs text-suave">Effectiveness control</dt><dd class="font-medium text-tinta">Effectiveness Checks</dd></div>
+                        <div><dt class="text-xs text-suave">Risk management</dt><dd class="font-medium text-tinta">Risk Assessments</dd></div>
+                        <div><dt class="text-xs text-suave">Health regulation</dt><dd class="font-medium text-tinta">ANMAT / inspections</dd></div>
+                    </dl>
+                </div>
+                <div>
+                    <h3 class="flex items-center gap-2 font-semibold text-tinta pb-3 mb-4 border-b border-linea"><i data-lucide="bot" class="text-acento"></i> AI &amp; technology</h3>
+                    <dl class="space-y-3 text-sm">
+                        <div><dt class="text-xs text-suave">Process automation</dt><dd class="font-medium text-tinta">N8N, Make</dd></div>
+                        <div><dt class="text-xs text-suave">Generative AI</dt><dd class="font-medium text-tinta">Claude, LLMs</dd></div>
+                        <div><dt class="text-xs text-suave">ERP &amp; WMS</dt><dd class="font-medium text-tinta">SAP, WMS</dd></div>
+                        <div><dt class="text-xs text-suave">Business Intelligence</dt><dd class="font-medium text-tinta">Power BI, Tableau</dd></div>
+                        <div><dt class="text-xs text-suave">Productivity &amp; CRM</dt><dd class="font-medium text-tinta">Advanced Excel, Salesforce</dd></div>
+                    </dl>
+                </div>
+                <div>
+                    <h3 class="flex items-center gap-2 font-semibold text-tinta pb-3 mb-4 border-b border-linea"><i data-lucide="file-check" class="text-acento"></i> Regulatory &amp; customs</h3>
+                    <dl class="space-y-3 text-sm">
+                        <div><dt class="text-xs text-suave">Pharma regulations</dt><dd class="font-medium text-tinta">GDP, GMP, ANMAT</dd></div>
+                        <div><dt class="text-xs text-suave">Dangerous goods</dt><dd class="font-medium text-tinta">DG Handling, IATA</dd></div>
+                        <div><dt class="text-xs text-suave">Certifications</dt><dd class="font-medium text-tinta">AEO (Authorized Economic Operator)</dd></div>
+                        <div><dt class="text-xs text-suave">Customs systems</dt><dd class="font-medium text-tinta">ARCA, Malvina System</dd></div>
+                        <div><dt class="text-xs text-suave">Central Bank (BCRA) regimes</dt><dd class="font-medium text-tinta">SEPAIMPO / SECOEXPO</dd></div>
+                    </dl>
+                </div>
+                <div>
+                    <h3 class="flex items-center gap-2 font-semibold text-tinta pb-3 mb-4 border-b border-linea"><i data-lucide="brain-circuit" class="text-acento"></i> Management &amp; methods</h3>
+                    <dl class="space-y-3 text-sm">
+                        <div><dt class="text-xs text-suave">Project Management</dt><dd class="font-medium text-tinta">PMI / methodologies</dd></div>
+                        <div><dt class="text-xs text-suave">Continuous improvement</dt><dd class="font-medium text-tinta">Lean, Kaizen, CAPA</dd></div>
+                        <div><dt class="text-xs text-suave">Strategic negotiation</dt><dd class="font-medium text-tinta">Logistics providers</dd></div>
+                        <div><dt class="text-xs text-suave">Financial management</dt><dd class="font-medium text-tinta">Cost analysis &amp; P&amp;L</dd></div>
+                        <div><dt class="text-xs text-suave">Executive communication</dt><dd class="font-medium text-tinta">Networking &amp; MBRs</dd></div>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Los dos bloques anchos -->
+            <div class="grid lg:grid-cols-2 gap-8 mt-14">
+                <div class="bg-papel border border-linea p-6 sm:p-8">
+                    <h3 class="font-serif text-2xl text-tinta">Service levels &amp; sales alignment</h3>
+                    <p class="text-sm text-suave mt-1 mb-6">Client-focused management and key account retention</p>
+                    <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-5 text-sm leading-relaxed">
+                        <div><dt class="font-semibold text-tinta mb-1">SLA compliance</dt><dd>Ongoing monitoring and alignment with the Sales team to ensure service level agreements are met.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">Executive reviews (MBRs)</dt><dd>Active participation in, and co-leadership of, monthly performance reviews with key pharma clients.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">KPI design &amp; control</dt><dd>Defined operational indicators aligned with the value perceived and the requirements set by the client.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">Customer service</dt><dd>Resolution of complex claims, Customer Service training and presence at key forums (AmCham Healthcare).</dd></div>
+                    </dl>
+                </div>
+                <div class="bg-papel border border-linea p-6 sm:p-8">
+                    <h3 class="font-serif text-2xl text-tinta">Finance, costs &amp; suppliers</h3>
+                    <p class="text-sm text-suave mt-1 mb-6">Working with Finance and Administration to improve operating profitability</p>
+                    <dl class="grid sm:grid-cols-2 gap-x-6 gap-y-5 text-sm leading-relaxed">
+                        <div><dt class="font-semibold text-tinta mb-1">Supplier contracts</dt><dd>Follow-up, negotiation and control of contracts with freight forwarders, carriers and bonded warehouses.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">Cost control</dt><dd>Continuous auditing of logistics expenses, international freight and demurrage to maximize operating margin.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">Billing &amp; records</dt><dd>Oversight of the area's billing, rate validation and accurate cost recording in the ERP.</dd></div>
+                        <div><dt class="font-semibold text-tinta mb-1">Finance partnership</dt><dd>Joint work to secure cash flow for international trade operations and P&amp;L reporting.</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAYECTORIA -->
+        <section id="trayectoria" class="envoltura pt-24">
+            <span class="volanta">Career</span>
+            <h2 class="titulo-seccion">Professional experience</h2>
+
+            <div class="border-b border-linea">
+                <article class="grid md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 border-t border-linea">
+                    <div class="text-[13px] text-suave">June 2025 – May 2026</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-tinta">Senior General Operations Supervisor</h3>
+                        <div class="text-sm text-acento mt-0.5 mb-4">Marken Limited · Global pharmaceutical logistics</div>
+                        <ul class="lista text-[15px] leading-relaxed">
+                            <li>Unified operational leadership of Exports, Imports, Warehouse and Customer Service (24 people).</li>
+                            <li><strong class="text-tinta font-semibold">Finance &amp; suppliers:</strong> follow-up of logistics supplier contracts with Finance and Administration, operating cost audits, rate validation and billing oversight.</li>
+                            <li><strong class="text-tinta font-semibold">SLAs &amp; service levels:</strong> SLA monitoring with the Sales team, active participation in MBRs (Monthly Business Reviews) and KPI development for key accounts.</li>
+                            <li><strong class="text-tinta font-semibold">Quality &amp; compliance:</strong> compliance with GxP (GDP/GMP), ISO 9001 and ANMAT regulations together with the Quality team.</li>
+                            <li><strong class="text-tinta font-semibold">Investigations &amp; corrective actions:</strong> logging, root cause analysis and investigation of deviations, leading CAPA plans and their <em>Effectiveness Checks</em>.</li>
+                            <li><strong class="text-tinta font-semibold">Risk assessments:</strong> operational risk assessments for project launches and new logistics flows.</li>
+                            <li>Development of and negotiation with the international network of logistics providers and freight forwarders.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 border-t border-linea">
+                    <div class="text-[13px] text-suave">May 2022 – June 2025</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-tinta">Exports Supervisor</h3>
+                        <div class="text-sm text-acento mt-0.5 mb-4">Marken Limited</div>
+                        <ul class="lista text-[15px] leading-relaxed">
+                            <li>Led the Exports team, fostering collaboration and reducing deviations.</li>
+                            <li><strong class="text-tinta font-semibold">Milestone:</strong> led the critical COVID-19 vaccine export project.</li>
+                            <li>Continuous improvement with Lean and Kaizen methodologies to optimize shipping lead times.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 border-t border-linea">
+                    <div class="text-[13px] text-suave">August 2020 – May 2022</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-tinta">Export Associate</h3>
+                        <div class="text-sm text-acento mt-0.5 mb-3">Marken Limited</div>
+                        <p class="text-[15px] leading-relaxed">Coordination of top-priority air shipments, dangerous goods handling (DG Handling) and direct coordination with branches across the global network.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 border-t border-linea">
+                    <div class="text-[13px] text-suave">October 2017 – November 2019</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-tinta">Customer Service &amp; Logistics Analyst</h3>
+                        <div class="text-sm text-acento mt-0.5 mb-3">Tate &amp; Lyle · Multinational food industry</div>
+                        <p class="text-[15px] leading-relaxed">Management of intercompany imports and exports. Active participant in the company's <strong class="text-tinta font-semibold">SAP implementation</strong>. Coordination with INAL and ANMAT.</p>
+                    </div>
+                </article>
+
+                <article class="grid md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 border-t border-linea">
+                    <div class="text-[13px] text-suave">2012 – 2017</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-tinta">Procurement &amp; Imports / International Trade Analyst</h3>
+                        <div class="text-sm text-acento mt-0.5 mb-3">Citratus SRL · Delta Compresión · Baterías Moura</div>
+                        <p class="text-[15px] leading-relaxed">End-to-end management of international purchasing, import cash flow, freight costing, hazardous materials handling (SEDRONAR) and administration in the Malvina System / BCRA.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN -->
+        <section id="formacion" class="envoltura pt-24 pb-24">
+            <span class="volanta">Education</span>
+            <h2 class="titulo-seccion">Education &amp; certifications</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="border-t-2 border-tinta pt-5">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-acento">Postgraduate</span>
+                    <h3 class="font-serif text-xl text-tinta mt-2">Project Management</h3>
+                    <p class="text-sm text-suave mt-1">National Technological University (UTN) · 2025</p>
+                    <p class="text-sm mt-3">Predictive and agile methodologies.</p>
+                </div>
+                <div class="border-t-2 border-tinta pt-5">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-acento">Bachelor's degree</span>
+                    <h3 class="font-serif text-xl text-tinta mt-2">B.A. in International Trade</h3>
+                    <p class="text-sm text-suave mt-1">UCES · 2024</p>
+                </div>
+                <div class="border-t-2 border-tinta pt-5">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-acento">Teacher training</span>
+                    <h3 class="font-serif text-xl text-tinta mt-2">English Teaching Degree</h3>
+                    <p class="text-sm text-suave mt-1">Higher Institute of Teacher Training · 2008 – 2011</p>
+                    <p class="text-sm mt-3">Teaching background and advanced command of the language.</p>
+                </div>
+                <div class="border-t-2 border-tinta pt-5">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-acento">Certification</span>
+                    <h3 class="font-serif text-xl text-tinta mt-2">AI Process Automation</h3>
+                    <p class="text-sm text-suave mt-1">Coderhouse</p>
+                    <p class="text-sm mt-3">N8N, Make and Claude Code.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CONTACTO -->
+    <footer id="contacto" class="bg-tinta text-white/70">
+        <div class="envoltura py-16 grid md:grid-cols-[1.4fr_1fr] gap-10 items-end">
+            <div>
+                <span class="volanta !text-celeste">Contact</span>
+                <p class="font-serif text-3xl sm:text-4xl text-white mt-3 leading-tight">Let's talk about your next challenge in operations and international trade.</p>
+            </div>
+            <div class="space-y-3 text-sm">
+                <a href="mailto:cataniamarcia32@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors"><i data-lucide="mail" class="text-celeste text-base"></i> cataniamarcia32@gmail.com</a>
+                <a href="https://wa.me/5492304361225" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-white transition-colors"><i data-lucide="phone" class="text-celeste text-base"></i> +54 9 230 436-1225</a>
+                <a href="https://www.linkedin.com/in/marciacatania" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-white transition-colors"><svg class="w-4 h-4 text-celeste" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> linkedin.com/in/marciacatania</a>
+                <span class="flex items-center gap-3"><i data-lucide="map-pin" class="text-celeste text-base"></i> Buenos Aires, Argentina</span>
+            </div>
+        </div>
+        <div class="envoltura py-6 border-t border-white/10 text-xs text-white/40">
+            Marcia Catania · International Trade graduate · Project Manager
+        </div>
+    </footer>
+
+    <script src="../js/vendor/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Menú del celular: se abre con el botón y se cierra al tocar una opción
+        const botonMenu = document.getElementById("boton-menu");
+        const menuCelular = document.getElementById("menu-celular");
+        botonMenu.addEventListener("click", () => {
+            const abierto = menuCelular.classList.toggle("hidden") === false;
+            botonMenu.setAttribute("aria-expanded", abierto);
+        });
+        menuCelular.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+            menuCelular.classList.add("hidden");
+            botonMenu.setAttribute("aria-expanded", false);
+        }));
+
+        // Al cambiar de idioma se queda en la misma sección (las dos versiones usan los mismos id)
+        document.querySelectorAll(".cambiar-idioma").forEach(a => a.addEventListener("click", () => {
+            a.href = a.getAttribute("href").split("#")[0] + location.hash;
+        }));
+    </script>
+</body>
+</html>
