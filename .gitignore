@@ -9,3 +9,6 @@ __pycache__/
 .vscode/
 Thumbs.db
 desktop.ini
+
+# Archivo para mandar (se genera con scripts/armar_un_archivo.py)
+para_enviar/

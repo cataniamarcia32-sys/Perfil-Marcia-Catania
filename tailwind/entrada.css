@@ -2,3 +2,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }   /* que el menú fijo no tape el título al saltar */
+  body { @apply bg-fondo text-texto font-sans antialiased; }
+  ::selection { @apply bg-tinta text-white; }
+  svg.lucide { width: 1em; height: 1em; flex-shrink: 0; }
+}
+
+@layer components {
+  .envoltura { @apply max-w-6xl mx-auto px-5 sm:px-8 lg:px-12; }
+  /* Texto chico en mayúsculas arriba de los títulos */
+  .volanta { @apply block text-xs font-semibold uppercase tracking-[.14em] text-acento; }
+  .titulo-seccion { @apply font-serif font-normal text-3xl sm:text-4xl text-tinta mt-2 mb-10; }
+  /* Menú de arriba */
+  .enlace-menu { @apply hover:text-tinta transition-colors; }
+  .btn { @apply inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold rounded-sm transition-colors; }
+  .btn-primario { @apply btn bg-tinta text-white hover:bg-acento; }
+  .btn-secundario { @apply btn border border-tinta text-tinta hover:bg-tinta hover:text-white; }
+  /* Frase de resultado de un caso: raya celeste a la izquierda */
+  .impacto { @apply mt-4 pl-4 border-l-[3px] border-celeste text-tinta; }
+  /* Listas con viñeta de punto chico */
+  .lista { @apply list-disc pl-5 space-y-1.5 marker:text-acento; }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas de diseño</title>
+    <link rel="stylesheet" href="../sitio/fuentes/fuentes.css">
+    <style>
+        /* Página de muestra (paso 2): tres direcciones visuales para elegir. No se publica.
+           CSS propio, sin Tailwind, para no mezclarlo con el sitio. La serif de la A es Georgia (viene con Windows);
+           si se elige, se baja una serif libre (Fraunces o Source Serif) a sitio/fuentes/. */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #e5e7eb; color: #1f2937; -webkit-font-smoothing: antialiased; }
+        img { display: block; max-width: 100%; }
+        svg.lucide { width: 1em; height: 1em; }
+
+        /* Barra para saltar entre propuestas */
+        .selector { position: sticky; top: 0; z-index: 50; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+                    padding: 10px 16px; background: rgba(17,24,39,.92); backdrop-filter: blur(8px); }
+        .selector a { color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 14px;
+                      border-radius: 999px; border: 1px solid rgba(255,255,255,.25); }
+        .selector a:hover { background: rgba(255,255,255,.12); }
+        .rotulo { max-width: 1120px; margin: 48px auto 12px; padding: 0 16px; }
+        .rotulo h2 { font-size: 22px; font-weight: 800; color: #111827; }
+        .rotulo p { font-size: 14px; color: #4b5563; margin-top: 4px; max-width: 760px; }
+        .muestra { max-width: 1120px; margin: 0 auto; border-radius: 14px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.18); }
+        @media (max-width: 1150px) { .muestra { margin: 0 16px; } }
+        .envoltura { padding: 0 48px; }
+        @media (max-width: 720px) { .envoltura { padding: 0 20px; } }
+
+        /* ============ A · EDITORIAL CÁLIDO ============ */
+        .a { --fondo: #f6f2ea; --tinta: #13363f; --texto: #33454b; --suave: #6b7b80; --acento: #2f7fa8; --celeste: #cfe4f1; --linea: #ddd5c6;
+             background: var(--fondo); color: var(--texto); }
+        .a .serif { font-family: Georgia, 'Times New Roman', serif; }
+        .a nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--linea); }
+        .a nav .marca { font-family: Georgia, serif; font-size: 20px; color: var(--tinta); }
+        .a nav ul { display: flex; gap: 26px; list-style: none; font-size: 13px; color: var(--suave); }
+        .a nav .boton { font-size: 13px; color: var(--tinta); border-bottom: 1px solid var(--tinta); padding-bottom: 2px; text-decoration: none; }
+        .a .hero { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: center; padding: 64px 0 56px; }
+        .a .volanta { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); font-weight: 600; }
+        .a h1 { font-family: Georgia, serif; font-weight: 400; font-size: 58px; line-height: 1.04; color: var(--tinta); margin: 16px 0 22px; letter-spacing: -.01em; }
+        .a h1 em { color: var(--acento); }
+        .a .bajada { font-size: 17px; line-height: 1.65; max-width: 540px; }
+        .a .datos { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 26px; font-size: 13px; color: var(--suave); }
+        .a .datos span { display: inline-flex; align-items: center; gap: 6px; }
+        .a .acciones { display: flex; gap: 12px; margin-top: 32px; }
+        .a .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 2px; }
+        .a .btn.primario { background: var(--tinta); color: #fff; }
+        .a .btn.secundario { color: var(--tinta); border: 1px solid var(--tinta); }
+        .a .foto { position: relative; }
+        .a .foto::before { content: ""; position: absolute; inset: 24px -24px -24px 24px; background: var(--celeste); }
+        .a .foto img { position: relative; aspect-ratio: 4/5; object-fit: cover; object-position: top; width: 100%; }
+        .a .numeros { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+        .a .numeros div { padding: 28px 0; }
+        .a .numeros div + div { border-left: 1px solid var(--linea); padding-left: 32px; }
+        .a .numeros b { display: block; font-family: Georgia, serif; font-weight: 400; font-size: 44px; color: var(--tinta); line-height: 1; }
+        .a .numeros small { display: block; font-size: 13px; color: var(--suave); margin-top: 8px; }
+        .a .seccion { padding: 56px 0; }
+        .a .seccion h3 { font-family: Georgia, serif; font-weight: 400; font-size: 34px; color: var(--tinta); margin-bottom: 28px; }
+        .a .seccion h3 span { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--acento); font-weight: 600; display: block; margin-bottom: 8px; }
+        .a .caso { display: grid; grid-template-columns: 180px 1fr; gap: 32px; border-top: 2px solid var(--tinta); padding-top: 22px; }
+        .a .caso .meta { font-size: 13px; color: var(--suave); }
+        .a .caso .meta b { display: block; color: var(--acento); font-weight: 600; margin-bottom: 4px; }
+        .a .caso h4 { font-family: Georgia, serif; font-weight: 400; font-size: 24px; color: var(--tinta); margin-bottom: 10px; }
+        .a .caso p { font-size: 15px; line-height: 1.65; }
+        .a .caso .impacto { margin-top: 14px; padding-left: 14px; border-left: 3px solid var(--celeste); color: var(--tinta); }
+        .a .puesto { display: grid; grid-template-columns: 180px 1fr; gap: 32px; padding: 22px 0; border-top: 1px solid var(--linea); }
+        .a .puesto .fecha { font-size: 13px; color: var(--suave); }
+        .a .puesto h4 { font-size: 17px; color: var(--tinta); font-weight: 600; }
+        .a .puesto .empresa { font-size: 14px; color: var(--acento); margin: 2px 0 10px; }
+        .a .puesto li { font-size: 14px; line-height: 1.6; margin-left: 18px; }
+
+        /* ============ B · EJECUTIVO NÍTIDO ============ */
+        .b { --marino: #0a1f44; --texto: #334155; --suave: #64748b; --acento: #0e8c7e; --panel: #f1f5f9; --linea: #e2e8f0;
+             background: #fff; color: var(--texto); }
+        .b nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+        .b nav .marca { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--marino); font-size: 15px; }
+        .b nav .marca i { width: 34px; height: 34px; border-radius: 8px; background: var(--marino); color: #fff; display: grid; place-items: center; font-style: normal; font-size: 13px; }
+        .b nav ul { display: flex; gap: 24px; list-style: none; font-size: 13px; font-weight: 500; color: var(--suave); }
+        .b nav .boton { background: var(--acento); color: #fff; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 8px; text-decoration: none; }
+        .b .hero { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; padding: 48px 0 40px; border-top: 1px solid var(--linea); }
+        .b .foto { width: 220px; height: 220px; border-radius: 50%; padding: 6px; background: linear-gradient(135deg, var(--acento), var(--marino)); }
+        .b .foto img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: top; border: 4px solid #fff; }
+        .b .etiqueta { display: inline-block; font-size: 12px; font-weight: 700; color: var(--acento); background: #e6f6f4; padding: 5px 10px; border-radius: 6px; }
+        .b h1 { font-size: 52px; font-weight: 900; color: var(--marino); letter-spacing: -.035em; line-height: 1; margin: 14px 0 8px; }
+        .b .cargo { font-size: 20px; font-weight: 600; color: var(--texto); letter-spacing: -.01em; }
+        .b .bajada { font-size: 15px; line-height: 1.65; margin-top: 14px; max-width: 640px; color: var(--suave); }
+        .b .acciones { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+        .b .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px; }
+        .b .btn.primario { background: var(--marino); color: #fff; }
+        .b .btn.secundario { background: var(--panel); color: var(--marino); }
+        .b .numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 48px; }
+        .b .numeros div { background: var(--panel); border-radius: 12px; padding: 20px 22px; border-left: 4px solid var(--acento); }
+        .b .numeros b { display: block; font-size: 30px; font-weight: 900; color: var(--marino); letter-spacing: -.03em; }
+        .b .numeros small { font-size: 13px; color: var(--suave); }
+        .b .franja { background: var(--panel); padding: 48px 0; }
+        .b .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .b h3 { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); margin-bottom: 14px; }
+        .b .tarjeta { background: #fff; border: 1px solid var(--linea); border-radius: 12px; padding: 24px; }
+        .b .tarjeta .arriba { display: flex; justify-content: space-between; font-size: 12px; color: var(--suave); margin-bottom: 10px; }
+        .b .tarjeta .arriba b { color: var(--acento); font-weight: 700; }
+        .b .tarjeta h4 { font-size: 18px; font-weight: 800; color: var(--marino); letter-spacing: -.01em; margin-bottom: 8px; line-height: 1.25; }
+        .b .tarjeta p, .b .tarjeta li { font-size: 14px; line-height: 1.6; }
+        .b .tarjeta ul { margin: 10px 0 0 18px; }
+        .b .impacto { margin-top: 14px; background: #e6f6f4; color: #0b5e55; font-size: 13px; font-weight: 600; padding: 10px 12px; border-radius: 8px; }
+        .b .linea-tiempo { border-left: 2px solid var(--linea); padding-left: 22px; position: relative; }
+        .b .linea-tiempo::before { content: ""; position: absolute; left: -7px; top: 26px; width: 12px; height: 12px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px #e6f6f4; }
+
+        /* ============ C · CONTRASTE ============ */
+        .c { --noche: #0f1b26; --texto: #334155; --suave: #64748b; --acento: #7cc4ea; --acento-osc: #1f7fb5; --fondo: #f4f6f8;
+             background: var(--fondo); color: var(--texto); }
+        .c .hero { display: grid; grid-template-columns: 1.15fr .85fr; background: var(--noche); color: #cbd5e1; min-height: 560px; }
+        .c .hero .texto { padding: 28px 56px 56px; display: flex; flex-direction: column; }
+        @media (max-width: 720px) { .c .hero .texto { padding: 24px 20px 40px; } }
+        .c nav { display: flex; gap: 22px; font-size: 13px; color: #94a3b8; margin-bottom: auto; flex-wrap: wrap; }
+        .c nav b { color: #fff; margin-right: auto; font-weight: 700; }
+        .c .volanta { margin-top: 56px; font-size: 13px; color: var(--acento); font-weight: 600; display: flex; align-items: center; gap: 10px; }
+        .c .volanta::before { content: ""; width: 28px; height: 2px; background: var(--acento); }
+        .c h1 { color: #fff; font-size: 60px; font-weight: 800; letter-spacing: -.03em; line-height: 1; margin: 14px 0 16px; }
+        .c .cargo { font-size: 19px; color: #e2e8f0; font-weight: 500; }
+        .c .bajada { font-size: 15px; line-height: 1.7; margin-top: 16px; max-width: 520px; color: #94a3b8; }
+        .c .acciones { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+        .c .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 999px; }
+        .c .btn.primario { background: var(--acento); color: var(--noche); }
+        .c .btn.secundario { color: #fff; border: 1px solid rgba(255,255,255,.25); }
+        .c .hero .foto { position: relative; }
+        .c .hero .foto img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        .c .hero .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--noche) 0%, transparent 25%); }
+        .c .numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #dbe2e8; margin-top: -1px; }
+        .c .numeros div { background: #fff; padding: 26px 32px; display: flex; align-items: center; gap: 16px; }
+        .c .numeros .icono { width: 44px; height: 44px; border-radius: 50%; background: #e8f4fb; color: var(--acento-osc); display: grid; place-items: center; font-size: 20px; flex-shrink: 0; }
+        .c .numeros b { display: block; font-size: 24px; font-weight: 800; color: var(--noche); }
+        .c .numeros small { font-size: 13px; color: var(--suave); }
+        .c .seccion { padding-top: 52px; padding-bottom: 52px; }
+        .c h3 { font-size: 28px; font-weight: 800; color: var(--noche); letter-spacing: -.02em; margin-bottom: 24px; display: inline-block; border-bottom: 4px solid var(--acento); padding-bottom: 4px; }
+        .c .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .c .tarjeta { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 1px 2px rgba(15,27,38,.06), 0 8px 24px rgba(15,27,38,.06); }
+        .c .tarjeta .chip { display: inline-block; font-size: 12px; font-weight: 600; color: var(--acento-osc); background: #e8f4fb; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+        .c .tarjeta h4 { font-size: 18px; font-weight: 700; color: var(--noche); margin-bottom: 8px; line-height: 1.3; }
+        .c .tarjeta p, .c .tarjeta li { font-size: 14px; line-height: 1.6; }
+        .c .tarjeta ul { margin: 10px 0 0 18px; }
+        .c .impacto { display: flex; gap: 8px; margin-top: 14px; font-size: 14px; color: var(--noche); font-weight: 600; }
+        .c .impacto svg { color: var(--acento-osc); flex-shrink: 0; margin-top: 3px; }
+        .c .tarjeta .fecha { font-size: 12px; color: var(--suave); font-weight: 600; }
+
+        /* Celular: todo en una columna */
+        @media (max-width: 860px) {
+            .a .hero, .b .hero, .c .hero, .a .caso, .a .puesto, .b .dos, .c .dos { grid-template-columns: 1fr; }
+            .a nav ul, .b nav ul { display: none; }
+            .a h1 { font-size: 40px; } .b h1 { font-size: 38px; } .c h1 { font-size: 42px; }
+            .a .numeros, .b .numeros, .c .numeros { grid-template-columns: 1fr; }
+            .a .numeros div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--linea); }
+            .a .foto { max-width: 320px; margin-right: 24px; }
+            .c .hero .foto { height: 380px; order: -1; }
+            .c .hero .foto::after { background: linear-gradient(0deg, var(--noche) 0%, transparent 35%); }
+            .c .volanta { margin-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="selector">
+    <a href="#a">A · Editorial cálido</a>
+    <a href="#b">B · Ejecutivo nítido</a>
+    <a href="#c">C · Contraste</a>
+</div>
+
+<!-- ======================= A ======================= -->
+<div class="rotulo" id="a">
+    <h2>A · Editorial cálido</h2>
+    <p>Como una revista de negocios: fondo marfil, azul petróleo, títulos en serif y mucho aire. El celeste sale del blazer de la foto. Es la más distinguida y la menos "plantilla".</p>
+</div>
+<div class="muestra a">
+    <div class="envoltura">
+        <nav>
+            <span class="marca">Marcia Catania</span>
+            <ul><li>Perfil</li><li>Casos</li><li>Liderazgo</li><li>Trayectoria</li><li>Formación</li></ul>
+            <a class="boton" href="#a">Contactar</a>
+        </nav>
+        <section class="hero">
+            <div>
+                <span class="volanta">Supply Chain & International Trade Leader</span>
+                <h1>Cadenas de suministro complejas, resueltas con <em>calidad y liderazgo</em>.</h1>
+                <p class="bajada">Licenciada en Comercio Exterior y posgraduada en Project Management, con +14 años en multinacionales. Logística crítica de alta complejidad (Pharma, cadena de frío, mercancías peligrosas) y equipos de alto rendimiento.</p>
+                <div class="datos">
+                    <span><i data-lucide="map-pin"></i> Buenos Aires, Argentina</span>
+                    <span><i data-lucide="globe"></i> Inglés C1 · Portugués</span>
+                    <span><i data-lucide="shield-check"></i> GxP · ISO 9001 · ANMAT · OEA</span>
+                </div>
+                <div class="acciones">
+                    <a class="btn primario" href="#a"><i data-lucide="mail"></i> Escribirme</a>
+                    <a class="btn secundario" href="#a"><i data-lucide="phone"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="foto"><img src="../sitio/img/marcia.jpg" alt="Marcia Catania"></div>
+        </section>
+        <div class="numeros">
+            <div><b>24</b><small>personas a cargo en 4 áreas</small></div>
+            <div><b>+14</b><small>años en empresas multinacionales</small></div>
+            <div><b>100%</b><small>en plazo y sin romper la cadena de frío (vacunas COVID-19)</small></div>
+        </div>
+        <section class="seccion">
+            <h3><span>Casos de éxito</span>Hitos que generaron valor</h3>
+            <div class="caso">
+                <div class="meta"><b>Logística crítica global</b>2022 – 2023</div>
+                <div>
+                    <h4>Exportación y distribución de vacunas COVID-19</h4>
+                    <p>Diseño y coordinación, bajo máxima presión, de la logística aérea y la cadena de frío para el envío internacional de vacunas, con permisos especiales de ANMAT, Ministerio de Salud, Aduana y líneas aéreas.</p>
+                    <p class="impacto">100% de cumplimiento de plazos sin ruptura de la cadena de frío, en plena emergencia global.</p>
+                </div>
+            </div>
+        </section>
+        <section class="seccion" style="padding-top:0">
+            <h3><span>Trayectoria</span>Experiencia</h3>
+            <div class="puesto">
+                <div class="fecha">Junio 2025 – Mayo 2026</div>
+                <div>
+                    <h4>Supervisora General de Operaciones Sr.</h4>
+                    <div class="empresa">Marken Limited · Logística farmacéutica global</div>
+                    <ul>
+                        <li>Liderazgo unificado de Exportaciones, Importaciones, Depósito y Customer Service (24 personas).</li>
+                        <li>Cumplimiento GxP (GDP/GMP), ISO 9001 y ANMAT junto al equipo de Calidad.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- ======================= B ======================= -->
+<div class="rotulo" id="b">
+    <h2>B · Ejecutivo nítido</h2>
+    <p>Corporativo y directo: blanco, azul marino y verde azulado, títulos en Inter muy marcados, tarjetas ordenadas. Es la más parecida al borrador, pero más limpia. Se lee rápido.</p>
+</div>
+<div class="muestra b">
+    <div class="envoltura">
+        <nav>
+            <span class="marca"><i>MC</i> Marcia Catania</span>
+            <ul><li>Perfil</li><li>Casos</li><li>Liderazgo</li><li>Trayectoria</li><li>Formación</li></ul>
+            <a class="boton" href="#b">Contactar</a>
+        </nav>
+        <section class="hero">
+            <div class="foto"><img src="../sitio/img/marcia.jpg" alt="Marcia Catania"></div>
+            <div>
+                <span class="etiqueta">Project Manager · Trade & Supply Chain</span>
+                <h1>Marcia Catania</h1>
+                <div class="cargo">Supply Chain & International Trade Leader</div>
+                <p class="bajada">Licenciada en Comercio Exterior y posgraduada en Project Management, con +14 años en multinacionales. Logística crítica de alta complejidad (Pharma, cadena de frío, mercancías peligrosas), resolución de crisis y equipos de alto rendimiento.</p>
+                <div class="acciones">
+                    <a class="btn primario" href="#b"><i data-lucide="mail"></i> Enviar email</a>
+                    <a class="btn secundario" href="#b"><i data-lucide="phone"></i> WhatsApp</a>
+                    <a class="btn secundario" href="#b"><i data-lucide="map-pin"></i> Buenos Aires</a>
+                </div>
+            </div>
+        </section>
+        <div class="numeros">
+            <div><b>24</b><small>personas a cargo · 4 áreas</small></div>
+            <div><b>+14 años</b><small>en empresas multinacionales</small></div>
+            <div><b>GxP · ISO · OEA</b><small>normativas que gestiona</small></div>
+        </div>
+    </div>
+    <div class="franja">
+        <div class="envoltura dos">
+            <div>
+                <h3>Caso de éxito</h3>
+                <div class="tarjeta">
+                    <div class="arriba"><b>Logística crítica global</b><span>2022 – 2023</span></div>
+                    <h4>Exportación y distribución de vacunas COVID-19</h4>
+                    <p>Logística aérea y cadena de frío para el envío internacional de vacunas, bajo estándares Pharma.</p>
+                    <ul>
+                        <li>Permisos especiales con ANMAT, Ministerio de Salud, Aduana y líneas aéreas.</li>
+                        <li>Protocolos de temperatura y normativa de mercancías peligrosas.</li>
+                    </ul>
+                    <div class="impacto">Impacto: 100% en plazo, sin romper la cadena de frío.</div>
+                </div>
+            </div>
+            <div>
+                <h3>Trayectoria</h3>
+                <div class="linea-tiempo">
+                    <div class="tarjeta">
+                        <div class="arriba"><b>Marken Limited</b><span>Jun 2025 – May 2026</span></div>
+                        <h4>Supervisora General de Operaciones Sr.</h4>
+                        <ul>
+                            <li>Liderazgo unificado de Exportaciones, Importaciones, Depósito y Customer Service (24 personas).</li>
+                            <li>Cumplimiento GxP (GDP/GMP), ISO 9001 y ANMAT junto al equipo de Calidad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ======================= C ======================= -->
+<div class="rotulo" id="c">
+    <h2>C · Contraste</h2>
+    <p>Encabezado oscuro de impacto con la foto grande a un costado, y el resto claro con tarjetas suaves. Acento celeste. Es la que más "presencia" tiene al abrir el link.</p>
+</div>
+<div class="muestra c">
+    <section class="hero">
+        <div class="texto">
+            <nav><b>MC</b><span>Perfil</span><span>Casos</span><span>Trayectoria</span><span>Contacto</span></nav>
+            <span class="volanta">Supply Chain & International Trade Leader</span>
+            <h1>Marcia Catania</h1>
+            <div class="cargo">Operaciones, comercio exterior y logística crítica Pharma</div>
+            <p class="bajada">Licenciada en Comercio Exterior y posgraduada en Project Management, con +14 años en multinacionales. Resolución de crisis, cadena de frío, mercancías peligrosas y equipos de alto rendimiento.</p>
+            <div class="acciones">
+                <a class="btn primario" href="#c"><i data-lucide="send"></i> Escribirme</a>
+                <a class="btn secundario" href="#c"><i data-lucide="phone"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="foto"><img src="../sitio/img/marcia.jpg" alt="Marcia Catania"></div>
+    </section>
+    <div class="numeros">
+        <div><span class="icono"><i data-lucide="users"></i></span><span><b>24 personas</b><small>4 áreas a cargo</small></span></div>
+        <div><span class="icono"><i data-lucide="briefcase"></i></span><span><b>+14 años</b><small>en multinacionales</small></span></div>
+        <div><span class="icono"><i data-lucide="shield-check"></i></span><span><b>GxP · ISO · OEA</b><small>ANMAT · IATA</small></span></div>
+    </div>
+    <div class="envoltura seccion">
+        <div class="dos">
+            <div>
+                <h3>Casos de éxito</h3>
+                <div class="tarjeta">
+                    <span class="chip">Logística crítica global · 2022 – 2023</span>
+                    <h4>Exportación y distribución de vacunas COVID-19</h4>
+                    <p>Logística aérea y cadena de frío para el envío internacional de vacunas, con permisos especiales de ANMAT, Ministerio de Salud, Aduana y líneas aéreas.</p>
+                    <div class="impacto"><i data-lucide="trending-up"></i> 100% en plazo, sin romper la cadena de frío.</div>
+                </div>
+            </div>
+            <div>
+                <h3>Trayectoria</h3>
+                <div class="tarjeta">
+                    <span class="fecha">Junio 2025 – Mayo 2026</span>
+                    <h4>Supervisora General de Operaciones Sr.</h4>
+                    <span class="chip">Marken Limited</span>
+                    <ul>
+                        <li>Liderazgo unificado de Exportaciones, Importaciones, Depósito y Customer Service (24 personas).</li>
+                        <li>Cumplimiento GxP (GDP/GMP), ISO 9001 y ANMAT junto al equipo de Calidad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height:64px"></div>
+<script src="../sitio/js/vendor/lucide.min.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
