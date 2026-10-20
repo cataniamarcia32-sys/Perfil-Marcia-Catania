@@ -40,6 +40,9 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
 - Para verla: abrir `sitio/index.html` con doble clic (necesita las carpetas de al lado; copiar solo el HTML no sirve).
 - Para mandarla en un solo archivo (WhatsApp / mail): `python scripts/armar_un_archivo.py` →
   `para_enviar/CV Marcia Catania.html` (~1,4 MB, todo adentro). Correrlo de nuevo después de cada cambio.
+- Publicación: GitHub Pages con `.github/workflows/publicar.yml`, que publica `sitio/` en cada push a `main`
+  (en GitHub: Settings → Pages → Source: "GitHub Actions"). Con la dirección pública:
+  `python scripts/poner_url.py https://usuario.github.io/cv-marcia/` (completa og:url y la imagen de la vista previa).
 
 ## Cómo quiero que trabajes conmigo
 - Trabajá en pasos chicos. Después de cada cambio, explicame en una o dos líneas qué hiciste.
