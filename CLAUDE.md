@@ -32,8 +32,8 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
   (pantalla de inicio del celular) y la vista previa de WhatsApp / LinkedIn `vista-previa.jpg` (1200 × 630, molde en
   `scripts/vista_previa.html`). Las dos imágenes se rearman con `python scripts/armar_imagenes.py` (Chrome headless +
   System.Drawing de Windows para el JPG, sin librerías). Las etiquetas Open Graph necesitan la URL pública completa
-  (`python scripts/poner_url.py`). Se publica en la cuenta de Marcia: https://cataniamarcia32-sys.github.io/perfil-marcia-catania/
-  (repositorio `perfil-marcia-catania`; GitHub no admite espacios en el nombre).
+  (`python scripts/poner_url.py`). Se publica en la cuenta de Marcia: https://cataniamarcia32-sys.github.io/Perfil-Marcia-Catania/
+  (repositorio `Perfil-Marcia-Catania`, con mayúsculas: en la dirección cuentan; GitHub no admite espacios).
 - Versión en inglés (20/10): `sitio/en/index.html`, misma estructura y mismos `id` de sección. Selector ES | EN
   (`.idiomas` en `entrada.css`) que mantiene la sección al cambiar. Vista previa propia `vista-previa-en.jpg` (molde
   `scripts/vista_previa_en.html`). **Si se cambia un dato, cambiarlo en las dos páginas.** Traducción hecha por Claude:
@@ -49,7 +49,7 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
   selector ES | EN lleva a la otra versión publicada). Correrlo de nuevo después de cada cambio.
 - Publicación: GitHub Pages con `.github/workflows/publicar.yml`, que publica `sitio/` en cada push a `main`
   (en GitHub: Settings → Pages → Source: "GitHub Actions"). Con la dirección pública:
-  `python scripts/poner_url.py https://cataniamarcia32-sys.github.io/perfil-marcia-catania/` (completa og:url y la imagen de la vista previa).
+  `python scripts/poner_url.py https://cataniamarcia32-sys.github.io/Perfil-Marcia-Catania/` (completa og:url y la imagen de la vista previa).
 
 ## Cómo quiero que trabajes conmigo
 - Trabajá en pasos chicos. Después de cada cambio, explicame en una o dos líneas qué hiciste.
