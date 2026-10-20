@@ -27,6 +27,11 @@ reclutadores / LinkedIn. El plan está en `SPEC.md`.
 - `sitio/index.html`: secciones Inicio, números, Casos (6), Liderazgo (franja petróleo), Competencias, Trayectoria,
   Formación y Contacto (pie). En el celular la foto va arriba del texto y el menú se despliega con el botón ☰.
   Lo que falta confirmar con Marcia está marcado con `PENDIENTE` en el HTML.
+- Para compartir (19/10): ícono de la pestaña `sitio/img/favicon.svg` (MC en serif sobre petróleo), `icono-180.png`
+  (pantalla de inicio del celular) y la vista previa de WhatsApp / LinkedIn `vista-previa.jpg` (1200 × 630, molde en
+  `scripts/vista_previa.html`). Las dos imágenes se rearman con `python scripts/armar_imagenes.py` (Chrome headless +
+  System.Drawing de Windows para el JPG, sin librerías). Las etiquetas Open Graph necesitan la URL pública completa
+  (PENDIENTE hasta publicar).
 - `borrador/`: el HTML original y la foto original, como referencia. No se publican.
 - `herramientas/`: `tailwindcss.exe` (no va a git, se copia de Apuestas).
 

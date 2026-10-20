@@ -65,8 +65,10 @@ def main():
     html = html.replace('<script src="js/vendor/lucide.min.js"></script>', "")
     html = html.replace("lucide.createIcons();", "")
 
-    # Foto adentro
-    html = html.replace('src="img/marcia.jpg"', f'src="{en_base64(os.path.join(SITIO, "img", "marcia.jpg"), "image/jpeg")}"')
+    # Foto e íconos de la pestaña adentro
+    for atributo, archivo, tipo in (("src", "marcia.jpg", "image/jpeg"), ("href", "favicon.svg", "image/svg+xml"),
+                                    ("href", "icono-180.png", "image/png")):
+        html = html.replace(f'{atributo}="img/{archivo}"', f'{atributo}="{en_base64(os.path.join(SITIO, "img", archivo), tipo)}"')
 
     # Control: que no quede nada apuntando a archivos de al lado
     sueltos = re.findall(r'(?:src|href)="(?!data:|#|https?:|mailto:|tel:)([^"]+)"', html)
